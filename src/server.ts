@@ -1,10 +1,13 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import router from './routes';
+import cors from 'cors';
 
 require('dotenv').config()
 
 const app = express();
+
+app.use(cors());
 
 mongoose.connect(`mongodb+srv://${process.env.CONNECT_MONGODB}`)
     .then((data) => {
