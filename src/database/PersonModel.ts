@@ -1,7 +1,7 @@
 import { Schema } from "mongoose";
 import mongoose from "mongoose";
 
-const PersonModel = new Schema({
+const CharacterModel = new Schema({
     name: String,
     height: Number,
     mass: Number,
@@ -13,4 +13,4 @@ const PersonModel = new Schema({
     profile_image: String
 }, { timestamps: true })
 
-export default mongoose.model('Persons', PersonModel)
+export default mongoose.model('Characters', CharacterModel)

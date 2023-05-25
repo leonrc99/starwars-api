@@ -2,8 +2,8 @@ import { Request, Response } from "express";
 import PersonModel from "../database/PersonModel";
 
 
-const PersonController = {
-    async findPerson( req: Request, res: Response): Promise<Response> {
+const CharacterController = {
+    async findPerson(req: Request, res: Response): Promise<Response> {
         let persons = await PersonModel.find()
         return res.json(persons)
     },
@@ -35,5 +35,5 @@ const PersonController = {
     },
 }
 
-export default PersonController
+export default CharacterController
 

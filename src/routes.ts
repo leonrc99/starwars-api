@@ -1,16 +1,16 @@
 import { Router } from "express";
-import CarController from "./controllers/PersonController";
+import CharacterController from "./controllers/PersonController";
 
 const router = Router()
 
-router.get('/persons', CarController.findPerson)
+router.get('/persons', CharacterController.findPerson)
 
-router.get('/person/:id', CarController.findPersonById)
+router.get('/person/:id', CharacterController.findPersonById)
 
-router.post('/person', CarController.createPerson)
+router.post('/person', CharacterController.createPerson)
 
-router.put('/person/:id', CarController.updatePerson)
+router.put('/person/:id', CharacterController.updatePerson)
 
-router.delete('/person/:id', CarController.deletePerson)
+router.delete('/person/:id', CharacterController.deletePerson)
 
 export default router
